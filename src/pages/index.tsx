@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
 import Services from '../components/sections/Services'
 
@@ -25,11 +26,11 @@ const Home: NextPage = () => {
         </div> */}
 
         <section
-          className="h-screen mb-12 bg-fixed bg-center bg-cover custom-img relative">
+          className="h-screen bg-fixed bg-center bg-cover custom-img relative -z-10" id='hero'>
           <div className='cont flex items-center h-full'>
 
             <div className='z-[9] lg:max-w-2xl max-w-xl space-y-4'>
-              <h1 className='lg:text-6xl md:text-6xl text-4xl text-left leading-snug text-white'>Providing Good Quality Building Services</h1>
+              <h1 className='lg:text-6xl md:text-6xl text-4xl text-left leading-snug text-white font-medium'>Providing Good Quality Building Services</h1>
 
               <p className='text-white lg:text-base md:text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusamus, ut libero, temporibus dolorem consequatur ipsa hic ex asperiores neque consequuntur aperiam dolores enim fuga magni beatae inventore velit soluta?</p>
 
@@ -37,13 +38,18 @@ const Home: NextPage = () => {
                 <a href="#">Nossos Serviços</a>
               </div>
             </div>
-          
+
           </div>
-        
+
         </section>
 
-        <Services />
-        <Projects />
+        <div className='container-inner'>
+
+          <About />
+          <Services />
+          <Projects />
+        </div>
+
       </main>
 
     </>

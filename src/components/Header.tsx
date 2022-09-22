@@ -4,6 +4,7 @@ import Logo from "./Logo";
 export default function Header() {
 
     const [active, setActive] = useState(false)
+    const [menuShow, setMenuShow] = useState(false)
 
     useEffect(() => {
         window.onscroll = () => {
@@ -14,13 +15,13 @@ export default function Header() {
 
     return (
         <header className={`fixed w-full top-0 transition-all duration-300 bg-opacity-[.12] z-50 uppercase ${active ? 'bg-white backdrop-blur-lg text-black' : 'bg-transparent backdrop-blur-0 text-white'}`}>
-            <div className={`cont flex justify-between py-4`}>
+            <div className={`cont flex justify-between py-4 items-center`}>
 
                 <div>
                     <Logo className='w-[4rem]' />
                 </div>
 
-                <div>
+                <div className="hidden lg:block">
                     <ul className='h-full flex items-center space-x-4 '>
                         <li>Home</li>
                         <li>Services</li>
@@ -28,10 +29,31 @@ export default function Header() {
                     </ul>
                 </div>
 
-                <div>
-                    <ul className='h-full flex items-center space-x-4 '>
-                        <li>Services</li>
-                    </ul>
+                <div className="flex items-center">
+                    <div className='h-full space-x-4 hidden lg:block'>
+                        <button>Services</button>
+                    </div>
+
+                    <div>
+                        <div className="block lg:hidden">
+                            {/* <button className={`${menuShow && 'text-black transition-colors duration-[1s]'}`} onClick={() => setMenuShow(!menuShow)}>Burguer</button> */}
+                            <div className="burguer-wrapper flex" id="burguer-wrapper">
+
+                                <input className="appearance-none opacity-0" onClick={() => setMenuShow(!menuShow)} type="checkbox" id="burger-toggle" />
+                                <label htmlFor="burger-toggle" className="burger-menu">
+                                    <div className="line after:bg-black after:bg-opacity-70 top-[30%]"></div>
+                                    <div className="line after:bg-black after:bg-opacity-70 after:delay-[0.1s] top-[50%]"></div>
+                                    <div className="line after:bg-black after:bg-opacity-70 after:delay-[0.2s] top-[70%]"></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <aside className={`lg:hidden flex fixed w-[70vw] h-screen top-0 right-0 transition-transform duration-[1s] bg-white text-black bg-opacity-[.95] backdrop-blur-lg -z-10 ${menuShow ? 'translate-x-0' : 'translate-x-[100vw]'}`}>
+                            <nav className="w-full h-full flex justify-center">
+                                <a className="self-center" href="#">CU</a>
+                            </nav>
+                        </aside>
+                    </div>
                 </div>
 
             </div>

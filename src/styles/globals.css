@@ -6,6 +6,10 @@
     @apply max-w-6xl mx-auto px-4;
 }
 
+.section {
+    @apply py-20 first:pt-40;
+}
+
 .custom-img {
     background-image: url(../../public/const.jpg)
 }
@@ -18,4 +22,40 @@
     top: 0;
     background: rgba(0,0,0,.7);
     z-index: 1;
+}
+
+.container-inner {
+    @apply rounded-[6px] bg-white z-[999] m-auto lg:mt-[-100px] lg:mx-[30px] lg:mb-0 lg:shadow-container shadow-none;
+}
+
+.sub-header {
+    @apply font-medium text-blue-500 uppercase mb-2;
+}
+
+.burger-menu {
+    @apply z-[100] block w-[2rem] h-[4rem] outline-none cursor-pointer relative;
+}
+
+.burger-menu .line {
+    @apply absolute left-0 w-full h-[2px] bg-black bg-opacity-30 rounded-[10px] overflow-hidden transition-all duration-[.5s];
+}
+
+.burger-menu .line::after {
+    @apply absolute content-[""] top-0 left-0 w-full h-full bg-blue-500 -translate-x-full transition-all duration-[0.25s];
+}
+
+.burger-menu:hover .line::after, #burger-toggle:checked~.burger-menu .line::after {
+    @apply translate-x-0;
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(1) {
+    transform: translateY(calc(4rem / 5)) rotate(45deg);
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(2) {
+    transform: scaleX(0);
+}
+
+#burger-toggle:checked~.burger-menu .line:nth-child(3) {
+    transform: translateY(calc(4rem / -5)) rotate(-45deg);
 }
