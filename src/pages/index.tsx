@@ -50,8 +50,8 @@ const Home: NextPage = () => {
                 <p className='text-white lg:text-base md:text-sm'>Nós da NV sempre prezamos por qualidade e confiança. Por isso, procuramos oferecer os melhores serviços de construção para suprir o que você precisa a qualquer hora. Quer saber mais?</p>
 
                 <div className='text-white flex flex-wrap space-x-3'>
-                  <a className='p-3 bg-blue-500' href="">Nossos Serviços</a>
-                  <a className='p-3 bg-blue-500' href="#">Nossos Serviços</a>
+                  <a className='p-3 bg-blue-500 hover:bg-blue-700 transition-colors duration-[.5s]' href="">Nossos Serviços</a>
+                  <a className='p-3 bg-blue-500 hover:bg-blue-700 transition-colors duration-[.5s]' href="#">Nossos Serviços</a>
                 </div>
               </div>
 

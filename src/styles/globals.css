@@ -28,7 +28,7 @@
 }
 
 .container-inner {
-    @apply rounded-[6px] bg-white z-[9] m-auto lg:mt-[-100px] lg:mx-[30px] lg:mb-0 lg:shadow-container shadow-none;
+    @apply lg:rounded-[6px] bg-white z-[9] m-auto lg:mt-[-100px] lg:mx-[30px] lg:mb-0 lg:shadow-container shadow-none;
 }
 
 .sub-header {
