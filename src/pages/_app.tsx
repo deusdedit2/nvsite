@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         openGraph={{
           title: 'NV Construções',
           images: [{
-            url: './src_1200.png',
+            url: 'https://nvconst.vervel.app/src_1200.png',
             width: 1200,
             height: 630,
             alt: 'Logo N e V'

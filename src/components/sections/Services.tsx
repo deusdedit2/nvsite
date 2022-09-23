@@ -27,7 +27,7 @@ export default function Services() {
     return (
         <section className='cont section' id="services">
             <h2 className='text-center sub-header'>Nossos Serviços</h2>
-            <h2 className='text-center text-5xl capitalize font-medium'>O que Fazemos</h2>
+            <h2 className='section-header'>O que Fazemos</h2>
 
             <div className="grid lg:grid-cols-2 gap-y-10 pt-20 justify-items-center justify-between">
 

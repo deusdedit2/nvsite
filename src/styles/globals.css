@@ -35,6 +35,10 @@
     @apply font-medium text-blue-500 uppercase mb-2;
 }
 
+.section-header {
+    @apply text-center text-5xl capitalize font-normal;
+}
+
 .burger-menu {
     @apply z-[100] block w-[2rem] h-[4rem] outline-none cursor-pointer relative;
 }

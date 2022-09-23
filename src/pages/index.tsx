@@ -70,7 +70,7 @@ const Home: NextPage = () => {
 
         <footer>
           <div className='cont py-10'>
-
+            <a href="">asdasd</a>
           </div>
         </footer>
 
