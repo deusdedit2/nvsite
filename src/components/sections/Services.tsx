@@ -3,16 +3,24 @@ export default function Services() {
 
     const services = [
         {
-            title: "cuu"
+            title: "Infraestrutura",
+            description: "Nós oferecemos uma excelente infraestrutura civil para suprir todas as necessidades da sua obra.",
+            icon: "foundation"
         },
         {
-            title: "cuu"
+            title: "Mão de Obra",
+            description: "Contamos com uma mão de obra altamente qualificada, obtendo resultados fiéis ao que foi proposto.",
+            icon: "handyman"
         },
         {
-            title: "cuu"
+            title: "Edificação",
+            description: "Construimos edificações excepcionais, utlizando materiais de alta qualidade somados com uma equipe única",
+            icon: "handyman"
         },
         {
-            title: "cuu"
+            title: "Projetos",
+            description: "Nossos projetos são únicos e cada um tem a sua particularidade. Venha realizar seu sonho.",
+            icon: "favorite"
         },
     ]
 
@@ -23,49 +31,20 @@ export default function Services() {
 
             <div className="grid lg:grid-cols-2 gap-y-10 pt-20 justify-items-center justify-between">
 
-                {/* <div className="flex justify-items-center h-fit gap-5">
-
-                    <div>
-                        <div className="bg-blue-500 bg-opacity-80">
-                            <span className="material-icons px-3 py-3">handyman</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="text-2xl">Infraestrutura</h3>
-                        <p className="mt-3 text-slate-400 lg:max-w-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci exercitationem a modi quisquam</p>
-                    </div>
-                </div>
-
-                <div className="flex justify-items-center h-fit gap-5">
-
-                    <div>
-                        <div className="bg-blue-500 bg-opacity-80">
-                            <span className="material-icons px-3 py-3">handyman</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="text-2xl">Infraestrutura</h3>
-                        <p className="mt-3 text-slate-400 lg:max-w-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci exercitationem a modi quisquam</p>
-                    </div>
-                </div> */}
-
-
                 {
                     services.map((item, count) => {
                         return (
-                            <div className="flex justify-items-center h-fit gap-5" key={count}>
+                            <div className="flex justify-items-center h-fit space-x-5 border border-solid border-[#cacaca] p-3 rounded-lg items-center transition-all hover:scale-110" key={count}>
 
                                 <div className="h-full">
                                     <div className="bg-blue-500 bg-opacity-80">
-                                        <span className="material-icons px-3 py-3">handyman</span>
+                                        <span className="material-icons px-3 py-3">{item.icon}</span>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-2xl mt-[-8px]">Infraestrutura</h3>
-                                    <p className="mt-3 text-slate-400 lg:max-w-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci exercitationem a modi quisquam</p>
+                                    <h3 className="text-2xl">{item.title}</h3>
+                                    <p className="mt-1 text-slate-400 lg:max-w-xs">{item.description}</p>
                                 </div>
                             </div>
                         )

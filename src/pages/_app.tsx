@@ -13,7 +13,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         additionalLinkTags={[{
           rel: 'shortcut icon',
           href: 'https://nvconstrucoes.com.br/assets/fav/favicon-16x16.png'
-        }]}/>
+        }]}
+        openGraph={{
+          title: 'NV Construções',
+          images: [{
+            url: './src_1200.png',
+            width: 1200,
+            height: 630,
+            alt: 'Logo N e V'
+          }]
+        }}/>
       <Header />
       <Component {...pageProps} />
     </>

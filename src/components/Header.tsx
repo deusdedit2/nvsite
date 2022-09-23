@@ -22,10 +22,10 @@ export default function Header() {
                 </div>
 
                 <div className="hidden lg:block">
-                    <ul className='h-full flex items-center space-x-4 '>
+                    <ul className='h-full flex items-center space-x-4 capitalize'>
                         <li>Home</li>
-                        <li>Services</li>
-                        <li>About</li>
+                        <li><a href="">Sobre</a></li>
+                        <li>Serviços</li>
                     </ul>
                 </div>
 
@@ -36,7 +36,6 @@ export default function Header() {
 
                     <div>
                         <div className="block lg:hidden">
-                            {/* <button className={`${menuShow && 'text-black transition-colors duration-[1s]'}`} onClick={() => setMenuShow(!menuShow)}>Burguer</button> */}
                             <div className="burguer-wrapper flex" id="burguer-wrapper">
 
                                 <input className="appearance-none opacity-0" onClick={() => setMenuShow(!menuShow)} type="checkbox" id="burger-toggle" />
@@ -49,8 +48,8 @@ export default function Header() {
                         </div>
 
                         <aside className={`lg:hidden flex fixed w-[70vw] h-screen top-0 right-0 transition-transform duration-[1s] bg-white text-black bg-opacity-[.95] backdrop-blur-lg -z-10 ${menuShow ? 'translate-x-0' : 'translate-x-[100vw]'}`}>
-                            <nav className="w-full h-full flex justify-center">
-                                <a className="self-center" href="#">CU</a>
+                            <nav className="w-full h-full flex justify-center p-20">
+                                <a href="#">CU</a>
                             </nav>
                         </aside>
                     </div>
