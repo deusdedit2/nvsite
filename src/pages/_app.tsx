@@ -1,13 +1,16 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'material-icons/iconfont/material-icons.css';
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Header from '../components/Header';
 import { NextSeo } from 'next-seo';
+import { ApolloProvider } from '@apollo/client';
+import { client } from '../lib/apollo';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NextSeo 
+      <NextSeo
         title='NV Construções'
         description='Confira nossas realizações e entre em contato conosco para produzir o que você deseja. NV Construções: Construindo sonhos.'
         additionalLinkTags={[{
@@ -22,9 +25,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             height: 630,
             alt: 'Logo N e V'
           }]
-        }}/>
+        }} />
       <Header />
-      <Component {...pageProps} />
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </>
   )
 }

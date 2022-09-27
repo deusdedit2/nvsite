@@ -54,7 +54,7 @@ export default function Contact() {
                 </div>
 
 
-                <div>
+                <div className="hidden lg:block">
                     <img className="h-full" src="./test.png" alt="" />
                 </div>
             </div>

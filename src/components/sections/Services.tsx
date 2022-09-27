@@ -15,12 +15,12 @@ export default function Services() {
         {
             title: "Edificação",
             description: "Construimos edificações excepcionais, utlizando materiais de alta qualidade somados com uma equipe única",
-            icon: "handyman"
+            icon: "apartment"
         },
         {
             title: "Projetos",
             description: "Nossos projetos são únicos e cada um tem a sua particularidade. Venha realizar seu sonho.",
-            icon: "favorite"
+            icon: "upload_file"
         },
     ]
 
@@ -34,17 +34,17 @@ export default function Services() {
                 {
                     services.map((item, count) => {
                         return (
-                            <div className="flex justify-items-center h-fit space-x-5 border border-solid border-[#cacaca] p-3 rounded-lg items-center transition-all hover:scale-110" key={count}>
+                            <div className="flex justify-items-center h-fit space-x-5 border border-solid border-[#cacaca] p-3 rounded-lg items-center transition-all hover:scale-[1.05] bg-blue-500" key={count}>
 
                                 <div className="h-full">
-                                    <div className="bg-blue-500 bg-opacity-80">
-                                        <span className="material-icons px-3 py-3">{item.icon}</span>
+                                    <div className="bg-opacity-80 text-white">
+                                        <span className="material-icons px-3 py-3 text-[3rem]">{item.icon}</span>
                                     </div>
                                 </div>
 
-                                <div>
+                                <div className="text-white">
                                     <h3 className="text-2xl">{item.title}</h3>
-                                    <p className="mt-1 text-slate-400 lg:max-w-xs">{item.description}</p>
+                                    <p className="mt-1 lg:max-w-xs">{item.description}</p>
                                 </div>
                             </div>
                         )
